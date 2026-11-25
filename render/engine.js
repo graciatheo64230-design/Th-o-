@@ -28,6 +28,44 @@ function wordAt(t) {
   return null;
 }
 
+// Sous-titres par groupes de mots (2 à 4 mots, coupure à la ponctuation) ; le mot prononcé est en jaune.
+let groups = null;
+function buildGroups() {
+  groups = [];
+  for (const s of timeline.shots) {
+    let cur = [];
+    const flush = () => { if (cur.length) groups.push(cur); cur = []; };
+    s.words.forEach((w, i) => {
+      cur.push(w);
+      const len = cur.map(x => x.w).join(' ').length;
+      if (/[.,!?…:;»]$/.test(w.w) || cur.length >= 4 || len > 16) flush();
+    });
+    flush();
+  }
+  groups.forEach((g, i) => { g.t0 = g[0].t0; g.t1 = i + 1 < groups.length ? Math.min(groups[i + 1][0].t0, g[g.length - 1].t1 + .5) : g[g.length - 1].t1 + .5; });
+}
+function groupCaption(t) {
+  if (!groups) buildGroups();
+  const g = groups.find(g => t >= g.t0 && t < g.t1); if (!g) return;
+  const age = t - g.t0, k = age < .08 ? .8 + age / .08 * .28 : age < .15 ? 1.08 - (age - .08) / .07 * .08 : 1;
+  const words = g.map(x => x.w);
+  let size = 58; ctx.font = `900 ${size}px Montserrat`;
+  const gap = () => ctx.measureText(' ').width * 1.6;
+  const full = () => words.reduce((a, x) => a + ctx.measureText(x).width, 0) + gap() * (words.length - 1);
+  while (full() > W * .86) { size -= 3; ctx.font = `900 ${size}px Montserrat`; }
+  ctx.save(); ctx.translate(W / 2, H * .6); ctx.scale(k, k);
+  ctx.textBaseline = 'middle'; ctx.textAlign = 'left'; ctx.lineJoin = 'round';
+  let x = -full() / 2; const sp = gap();
+  g.forEach((wd) => {
+    const ww = ctx.measureText(wd.w).width, on = t >= wd.t0;
+    ctx.shadowColor = 'rgba(0,0,0,.55)'; ctx.shadowBlur = 10; ctx.shadowOffsetY = 4;
+    ctx.lineWidth = 12; ctx.strokeStyle = '#000'; ctx.strokeText(wd.w, x, 0); ctx.shadowColor = 'transparent';
+    const cur = on && (g.indexOf(wd) === g.length - 1 || t < g[g.indexOf(wd) + 1].t0);
+    ctx.fillStyle = cur ? '#ffd84a' : (on ? '#ffffff' : 'rgba(255,255,255,.55)'); ctx.fillText(wd.w, x, 0);
+    x += ww + sp;
+  });
+  ctx.restore();
+}
 function caption(word, age) {
   const k = age < .09 ? .75 + age / .09 * .33 : age < .16 ? 1.08 - (age - .09) / .07 * .08 : 1;
   ctx.save();
@@ -87,8 +125,8 @@ window.frame = (t, quality = .9) => {
   ctx.drawImage(renderer.domElement, 0, 0);
   vignette();
   ep.overlay?.(s.shot, u, d, t);
-  const w = wordAt(t);
-  if (w) caption(w.w, w.age);
+  if (timeline.captions === 'groups') groupCaption(t);
+  else { const w = wordAt(t); if (w) caption(w.w, w.age); }
   // fondus début / fin
   const fade = Math.max(clamp(1 - t / .6), clamp((t - (timeline.duration - 1.6)) / 1.4));
   if (fade > 0) { ctx.fillStyle = `rgba(0,0,0,${fade})`; ctx.fillRect(0, 0, W, H); }

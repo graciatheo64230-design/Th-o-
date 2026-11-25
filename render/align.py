@@ -78,7 +78,7 @@ def align(ep, words_file, audio, start, end):
         shots.append({"shot": seg["shot"], "t0": round(t0, 3), "words": [{k: v for k, v in w.items() if k != "si"} for w in ws], "text": seg["text"]})
     for k, s in enumerate(shots):
         s["t1"] = shots[k + 1]["t0"] if k + 1 < len(shots) else round(dur, 3)
-    json.dump({"duration": round(dur, 3), "shots": shots}, open(os.path.join(D, "timeline.json"), "w"), ensure_ascii=False, indent=1)
+    json.dump({"duration": round(dur, 3), "captions": script.get("captions", "word"), "shots": shots}, open(os.path.join(D, "timeline.json"), "w"), ensure_ascii=False, indent=1)
     # audio : extrait de la voix + musique douce
     SR = 44100
     raw = subprocess.run(["ffmpeg", "-v", "error", "-ss", str(off), "-t", str(dur), "-i", audio, "-ac", "1", "-ar", str(SR), "-f", "s16le", "-"], capture_output=True, check=True).stdout

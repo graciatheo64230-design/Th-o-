@@ -27,11 +27,60 @@ def weight(w):
     v = len(re.findall(r"[aeiouyàâéèêëîïôûùœ]+", w.lower()))
     return max(1, v) + 0.3
 
+# Voix fournie : python3 build_audio.py epN --voice fichier.m4a
+USER_VOICE = sys.argv[sys.argv.index("--voice") + 1] if "--voice" in sys.argv else None
+user_parts = None
+if USER_VOICE:
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", USER_VOICE, "-ac", "1", "-ar", str(SR), "-f", "s16le", "-"], capture_output=True, check=True).stdout
+    uv = np.frombuffer(raw, dtype=np.int16).astype(np.float32) / 32768
+    # énergie par fenêtre de 20 ms -> silences -> on coupe aux N-1 plus longs silences
+    hop = int(.02 * SR); e = np.sqrt(np.convolve(uv ** 2, np.ones(hop) / hop, "same"))[::hop]
+    thr = max(.01, np.percentile(e, 30) * 1.5)
+    loud = e > thr
+    gaps, i = [], 0
+    while i < len(loud):
+        if not loud[i]:
+            j = i
+            while j < len(loud) and not loud[j]: j += 1
+            if i > 0 and j < len(loud): gaps.append((j - i, i, j))
+            i = j
+        else: i += 1
+    n = len(script["segments"])
+    # Programmation dynamique : on choisit n-1 silences (dans l'ordre) pour que la durée de chaque
+    # morceau colle à la longueur attendue de la phrase, en préférant les silences longs.
+    G = [((a + b) // 2 * hop, (b - a) * .02) for _, a, b in sorted(gaps, key=lambda g: g[1])]
+    if len(G) < n - 1: sys.exit(f"Pas assez de pauses dans la voix : {len(G)} pauses pour {n} lignes")
+    wts = [sum(weight(w) for w in sg["text"].split()) for sg in script["segments"]]
+    T = len(uv) / SR; exp = [T * w / sum(wts) for w in wts]
+    pts = [(0, 0)] + G + [(len(uv), 0)]
+    INF = 1e18; m = len(pts)
+    best = [[INF] * m for _ in range(n + 1)]; back = [[-1] * m for _ in range(n + 1)]
+    best[0][0] = 0
+    for k in range(1, n + 1):
+        for j in range(1, m):
+            if k < n and j == m - 1: continue
+            if k == n and j != m - 1: continue
+            for i in range(j):
+                if best[k - 1][i] >= INF: continue
+                d = (pts[j][0] - pts[i][0]) / SR
+                c = best[k - 1][i] + (d - exp[k - 1]) ** 2 / max(exp[k - 1], .5) - 2.0 * pts[j][1]
+                if c < best[k][j]: best[k][j] = c; back[k][j] = i
+    path, j = [], m - 1
+    for k in range(n, 0, -1): path.append(j); j = back[k][j]
+    cuts = [pts[j][0] for j in reversed(path)][:-1]
+    bounds = [0] + cuts + [len(uv)]
+    user_parts = []
+    for k in range(n):
+        a = uv[bounds[k]:bounds[k + 1]]
+        idx = np.where(np.abs(a) > thr * 2)[0]
+        user_parts.append(a[max(0, idx[0] - 600): idx[-1] + 1500] if len(idx) else a)
+    print("voix découpée en", n, "phrases")
+
 voice = [np.zeros(int(0.6 * SR))]
 t = 0.6
 timeline = []
 for i, seg in enumerate(script["segments"]):
-    a = tts(seg["text"], f"/tmp/seg{i}.wav")
+    a = user_parts[i] if user_parts else tts(seg["text"], f"/tmp/seg{i}.wav")
     dur = len(a) / SR
     words = [w for w in seg["text"].split() if w not in ("«", "»", ":", "?", "!")]
     ws = [weight(w) for w in words]
@@ -41,7 +90,7 @@ for i, seg in enumerate(script["segments"]):
         d = dur * k / tot
         wt.append({"w": w.replace("«", "").replace("»", "").strip(), "t0": round(acc, 3), "t1": round(acc + d, 3)})
         acc += d
-    pause = seg.get("pause", 0.35)
+    pause = seg.get("pause", 0.35) if not user_parts else min(seg.get("pause", 0.35), .5)
     timeline.append({"shot": seg["shot"], "t0": round(t, 3), "t1": round(t + dur + pause, 3), "words": wt, "text": seg["text"]})
     voice += [a, np.zeros(int(pause * SR))]
     t += dur + pause

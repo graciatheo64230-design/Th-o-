@@ -86,6 +86,8 @@ function drawFace(g, o, expr) {
     g.beginPath(); g.moveTo(119, ey); g.lineTo(137, ey); g.stroke();
     g.fillStyle = 'rgba(255,255,255,.18)'; for (const x of ex) { g.beginPath(); g.arc(x, ey + 2, 25, 0, 7); g.fill(); }
   }
+  if (o.mustache) { g.fillStyle = o.mustache; g.beginPath(); g.ellipse(112, 158, 22, 9, .2, 0, 7); g.ellipse(144, 158, 22, 9, -.2, 0, 7); g.fill(); }
+  if (o.wrinkles) { g.strokeStyle = 'rgba(120,70,50,.35)'; g.lineWidth = 3; for (const x of [56, 200]) { g.beginPath(); g.moveTo(x, ey - 4); g.lineTo(x + (x < 128 ? -8 : 8), ey + 4); g.stroke(); } g.beginPath(); g.moveTo(104, 62); g.lineTo(152, 62); g.stroke(); }
   // larmes
   if (expr === 'cry') {
     g.fillStyle = 'rgba(120,190,255,.85)';
@@ -158,6 +160,7 @@ export function makeChar(o) {
   ch.torso = rbox(1.02, 1.04, .54, .06, shirt, g, 0, 1.5, 0);
   if (o.apron) { const a = box(.86, 1.25, .04, mat(o.apron), g, 0, 1.3, .29); box(.4, .22, .02, mat(o.apronPocket || '#ffffff'), a, 0, -.25, .03); box(1.03, .07, .56, mat(o.apron), g, 0, 1.62, 0); }
   if (o.scarf) { rbox(1.1, .22, .66, .08, mat(o.scarf), g, 0, 1.98, 0); box(.24, .5, .08, mat(o.scarf), g, .25, 1.7, .32); }
+  if (o.coat) { const cm = mat(o.coat); rbox(1.1, 1.1, .62, .06, cm, g, 0, 1.48, 0); box(1.04, .55, .58, cm, g, 0, .78, 0); box(.06, 1.5, .02, mat('#222'), g, 0, 1.2, .32); o.sleeve = o.sleeve || o.coat; }
   if (o.vest) { box(1.05, 1.0, .1, mat(o.vest), g, 0, 1.5, .24); }
   // bras
   for (const s of [-1, 1]) {
@@ -183,6 +186,17 @@ export function makeChar(o) {
     const sg = new THREE.SphereGeometry(.13, 10, 8);
     for (let i = 0; i < 7; i++) mesh(sg, hm, head, -.42 + i * .14, .76 + (i % 2) * .03, .4);
     for (let i = 0; i < 6; i++) mesh(sg, hm, head, -.36 + i * .145, 1.02, .1 + (i % 2) * .12);
+  }
+  if (hair === 'bald') {
+    for (const s of [-1, 1]) rbox(.12, .4, .7, .05, hm, head, .5 * s, .55, -.08);
+    box(1.04, .4, .2, hm, head, 0, .5, -.4);
+  }
+  if (hair === 'long' || hair === 'ponytail') {
+    rbox(1.06, .3, 1.0, .12, hm, head, 0, .88, -.01);
+    box(1.06, hair === 'long' ? 1.1 : .62, .3, hm, head, 0, hair === 'long' ? .38 : .62, -.36);
+    if (hair === 'long') for (const s of [-1, 1]) box(.14, .9, .5, hm, head, .5 * s, .45, -.12);
+    else mesh(new THREE.SphereGeometry(.2, 12, 10), hm, head, 0, .7, -.6);
+    for (let i = 0; i < 5; i++) mesh(new THREE.SphereGeometry(.12, 10, 8), hm, head, -.34 + i * .17, .8, .42);
   }
   if (hair === 'bun') {
     mesh(new THREE.SphereGeometry(.26, 16, 12), hm, head, 0, 1.08, -.22);
@@ -215,4 +229,45 @@ export function makeChar(o) {
   };
   ch.idle = (t, k = 1) => { ch.head.rotation.z = Math.sin(t * 1.3) * .03 * k; ch.torso.position.y = 1.5 + Math.sin(t * 2) * .01 * k; };
   return ch;
+}
+
+// ---------- Chien en blocs ----------
+const dogFaceCache = new Map();
+function dogFace(expr, col) {
+  const k = expr + col; if (dogFaceCache.has(k)) return dogFaceCache.get(k);
+  const t = canvasTex(256, 256, (g) => {
+    g.lineCap = 'round';
+    const sad = expr === 'sad', happy = expr === 'happy';
+    for (const x of [78, 178]) {
+      if (happy) { g.strokeStyle = '#141010'; g.lineWidth = 9; g.beginPath(); g.moveTo(x - 18, 92); g.quadraticCurveTo(x, 70, x + 18, 92); g.stroke(); }
+      else { g.fillStyle = '#141010'; g.beginPath(); g.ellipse(x, 88, 20, 24, 0, 0, 7); g.fill(); g.fillStyle = '#fff'; g.beginPath(); g.arc(x - 7, 78, 8, 0, 7); g.fill(); g.beginPath(); g.arc(x + 6, 96, 4, 0, 7); g.fill(); }
+      g.strokeStyle = '#3a2416'; g.lineWidth = 9; g.beginPath();
+      const s = x < 128 ? 1 : -1;
+      if (sad) { g.moveTo(x - 20 * s, 54); g.lineTo(x + 16 * s, 42); } else { g.moveTo(x - 18, 50); g.lineTo(x + 18, 50); }
+      g.stroke();
+    }
+  });
+  dogFaceCache.set(k, t); return t;
+}
+export function makeDog(o = {}) {
+  const g = new THREE.Group(), fur = mat(o.color || '#c99a62', { roughness: .9 }), light = mat(o.light || '#efdcb8', { roughness: .9 }), dark = mat(o.dark || '#7a5232');
+  const d = { g };
+  rbox(.8, .7, 1.4, .15, fur, g, 0, .85, 0);
+  d.legs = [];
+  for (const [x, z] of [[-.25, .45], [.25, .45], [-.25, -.45], [.25, -.45]]) { const l = new THREE.Group(); l.position.set(x, .6, z); g.add(l); rbox(.26, .62, .26, .06, fur, l, 0, -.3, 0); rbox(.28, .14, .32, .05, light, l, 0, -.56, .03); d.legs.push(l); }
+  const tail = new THREE.Group(); tail.position.set(0, 1.05, -.68); g.add(tail); rbox(.14, .14, .5, .05, fur, tail, 0, .12, -.2).rotation.x = .7; d.tail = tail;
+  const head = new THREE.Group(); head.position.set(0, 1.2, .62); g.add(head); d.head = head;
+  rbox(.9, .8, .75, .2, fur, head, 0, .2, .05);
+  rbox(.5, .32, .34, .1, light, head, 0, .02, .5);
+  mesh(new THREE.SphereGeometry(.12, 12, 10), mat('#1a1414', { roughness: .3 }), head, 0, .14, .68);
+  for (const s of [-1, 1]) { const ear = rbox(.2, .55, .3, .08, dark, head, .5 * s, .25, 0); ear.rotation.z = .25 * s; d['ear' + (s < 0 ? 'L' : 'R')] = ear; }
+  const fm = new THREE.MeshStandardMaterial({ map: dogFace('neutral', ''), transparent: true, polygonOffset: true, polygonOffsetFactor: -2 });
+  const face = new THREE.Mesh(new THREE.PlaneGeometry(.86, .86), fm); face.position.set(0, .3, .43); head.add(face);
+  if (o.collar) rbox(.84, .14, .6, .05, mat(o.collar), g, 0, 1.15, .45);
+  d.setFace = (e) => { fm.map = dogFace(e, ''); };
+  d.reset = () => { d.g.rotation.set(0, 0, 0); d.head.rotation.set(0, 0, 0); d.tail.rotation.set(0, 0, 0); d.legs.forEach(l => l.rotation.set(0, 0, 0)); d.setFace('neutral'); d.g.visible = true; };
+  d.wag = (t, k = 1) => { d.tail.rotation.y = Math.sin(t * 14) * .6 * k; };
+  d.walk = (t, sp = 8) => d.legs.forEach((l, i) => l.rotation.x = Math.sin(t * sp + (i % 2 ? 0 : Math.PI) + (i > 1 ? Math.PI : 0)) * .45);
+  g.traverse(m => { if (m.isMesh) m.castShadow = true; });
+  return d;
 }

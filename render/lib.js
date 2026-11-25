@@ -293,6 +293,7 @@ function catFace(expr) {
 }
 export function makeCat(o = {}) {
   const g = new THREE.Group(), fur = mat(o.color || '#e07a2a', { roughness: .9 }), light = mat(o.light || '#fff0dc', { roughness: .9 });
+  g.rotation.order = 'YXZ';
   const c = { g };
   rbox(.5, .45, .9, .12, fur, g, 0, .5, 0);
   c.legs = [];

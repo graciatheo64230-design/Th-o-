@@ -87,7 +87,7 @@ export function create(renderer, ui) {
     oldman_wave(u, d, p, t) {
       w.mood('dawn'); catAt(1.2, 15.75, .35); cat.wag(t, 1.5);
       P(albert, 1.6, 3.6, Math.PI); albert.setFace('smileClosed'); wave(albert, t); albert.head.rotation.x = -.5;
-      w.look(v3(3.2, 1.2, 7.2), v3(1.4, 4.5, 1));
+      if (p < .5) w.look(v3(1.1, 1.0, 1.4), v3(1.6, 2.5, 3.6)); else w.look(v3(2.6, 1.2, 7.0), v3(1.3, 9, 0));
     },
     neighbors(u, d, p, t) {
       w.mood('day'); P(n1, -3.4, 2.6, .5); P(n2, -2.4, 2.9, -.6); n1.setFace('laugh'); n2.setFace('smile'); n1.armR.rotation.x = -1.5; n1.armR.rotation.z = .5; n2.head.rotation.y = .4;
@@ -97,26 +97,26 @@ export function create(renderer, ui) {
     empty_window(u, d, p, t) { w.mood('day'); w.shoot(WIN5, lerp(4, 2.8, ease(p)), .2, -.05); },
     wait(u, d, p, t) {
       w.mood(p < .5 ? 'dawn' : 'day'); P(albert, 1.6, 3.6, Math.PI - .2); albert.setFace(p < .5 ? 'neutral' : 'sad'); albert.head.rotation.x = -.45;
-      w.shoot(w.head(albert, -.3), lerp(3.2, 2.6, p), Math.PI - .2 + Math.PI, -.25);
+      w.shoot(w.head(albert, -.3), lerp(3.0, 2.5, p), Math.PI - .2, -.2);
     },
     stairs(u, d, p, t) {
       w.mood('day'); const i = lerp(1, 12, p);
       P(albert, 40, -i * .55, Math.PI, .3 * i); albert.walk(t, 5, .45); albert.setFace('sad'); albert.armR.rotation.x = -.5;
-      w.shoot(v3(40, .3 * i + 2.0, -i * .55), 4.2, .35, .35);
+      w.shoot(v3(40, .3 * i + 2.0, -i * .55), 3.4, Math.PI - .25, .3);
     },
     knock(u, d, p, t) {
       w.mood('day'); P(albert, 40.2, -7.6, Math.PI, 4.8); albert.setFace(p < .5 ? 'neutral' : 'sad');
       albert.armR.rotation.x = -1.7 + Math.abs(Math.sin(t * 14)) * .35;
-      w.shoot(v3(40.2, 6.6, -8.3), 2.8, .7, .05);
+      w.shoot(v3(40.2, 6.5, -8.3), 2.9, .32, .05);
     },
     lady_fallen(u, d, p, t) {
       w.mood('day'); fallenChair.visible = true;
-      P(lady, 81.6, -2.6, 0, .28); lady.g.rotation.z = Math.PI / 2; lady.setFace('sad');
-      catAt(80.4, 0, -2.2, Math.PI / 2); cat.setFace('meow');
-      w.shoot(v3(80.6, .6, -2.6), lerp(5, 4.2, p), .4, .5);
+      P(lady, 81.4, -1.4, 0, .27); lady.g.rotation.x = -Math.PI / 2; lady.setFace('sad'); lady.armL.rotation.x = -.4;
+      catAt(80.3, 0, -3.3, Math.PI / 2); cat.setFace('meow');
+      w.shoot(v3(81.0, .6, -2.8), lerp(5, 4.2, p), .5, .6);
     },
-    lady_close(u, d, p, t) { w.mood('day'); P(lady, 81.6, -2.6, 0, .28); lady.g.rotation.z = Math.PI / 2; lady.setFace('cry'); w.shoot(v3(79.15, .7, -2.6), lerp(2.0, 1.7, p), .2, .15); },
-    cat_meow(u, d, p, t) { w.mood('day'); catAt(80.4, 0, -2.2, Math.PI / 2 + .6); cat.setFace(Math.sin(t * 9) > -.2 ? 'meow' : 'neutral'); cat.head.rotation.x = -.2 + Math.sin(t * 9) * .1; w.shoot(v3(80.65, .95, -2.0), lerp(1.6, 1.3, p), Math.PI / 2 + .6, .05); },
+    lady_close(u, d, p, t) { w.mood('day'); P(lady, 81.4, -1.4, 0, .27); lady.g.rotation.x = -Math.PI / 2; lady.setFace('cry'); w.shoot(v3(81.4, .5, -3.85), lerp(2.0, 1.7, p), 0, 1.15); },
+    cat_meow(u, d, p, t) { w.mood('day'); catAt(80.3, 0, -3.3, Math.PI / 2 + .6); cat.setFace(Math.sin(t * 9) > -.2 ? 'meow' : 'neutral'); cat.head.rotation.x = -.2 + Math.sin(t * 9) * .1; w.shoot(v3(80.55, .95, -3.15), lerp(1.7, 1.4, p), Math.PI / 2 + .6, .1); },
     firefighters(u, d, p, t) {
       w.mood('day'); truck.visible = true; siren.material.emissiveIntensity = Math.sin(t * 20) > 0 ? 3 : .2; siren.material.emissive.set(Math.sin(t * 10) > 0 ? '#2e6bff' : '#ff3030');
       P(ff1, lerp(2.5, -.6, p), 3.6, -Math.PI / 2 - .4); P(ff2, lerp(3.5, .3, p), 4.3, -Math.PI / 2 - .4); ff1.walk(t, 11, .6); ff2.walk(t + .3, 11, .6); ff1.setFace('angry'); ff2.setFace('angry');

@@ -1,0 +1,73 @@
+{
+ "title": "Le compteur",
+ "segments": [
+  {
+   "text": "Le compteur.",
+   "shot": "title"
+  },
+  {
+   "text": "Dans cette ville, au-dessus de chaque tête, un chiffre indique combien de jours il te reste à vivre.",
+   "shot": "rule"
+  },
+  {
+   "text": "Tout le monde peut voir le chiffre des autres. Mais jamais le sien.",
+   "shot": "own"
+  },
+  {
+   "text": "Un matin, Tom regarda son meilleur ami, Enzo.",
+   "shot": "tom_enzo"
+  },
+  {
+   "text": "Au-dessus de sa tête, il y avait écrit : « 1 ».",
+   "shot": "one"
+  },
+  {
+   "text": "Tom ne lui a rien dit.",
+   "shot": "tom_silent"
+  },
+  {
+   "text": "Il ne l'a pas lâché de la journée.",
+   "shot": "follow"
+  },
+  {
+   "text": "Il l'a empêché de monter à l'échelle.",
+   "shot": "ladder"
+  },
+  {
+   "text": "Il l'a éloigné de la rivière.",
+   "shot": "river"
+  },
+  {
+   "text": "Le soir, quand Enzo a voulu traverser la route en courant, Tom l'a tiré en arrière.",
+   "shot": "road"
+  },
+  {
+   "text": "Et c'est Tom que la voiture a percuté.",
+   "shot": "impact"
+  },
+  {
+   "text": "À l'hôpital, Enzo pleurait à côté de son lit.",
+   "shot": "hospital"
+  },
+  {
+   "text": "Au-dessus de sa tête, le chiffre avait changé : « 23 412 ».",
+   "shot": "number"
+  },
+  {
+   "text": "Tom a souri. Il avait réussi.",
+   "shot": "tom_smile"
+  },
+  {
+   "text": "Ce que Tom ne savait pas, c'est que ce matin-là, au-dessus de sa propre tête,",
+   "shot": "flash"
+  },
+  {
+   "text": "il y avait aussi un « 1 ».",
+   "shot": "tom_one"
+  },
+  {
+   "text": "Enzo l'avait vu. Et il ne lui avait rien dit.",
+   "shot": "final"
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "title": "Le vœu",
+ "segments": [
+  {
+   "text": "Épisode 15 : le vœu.",
+   "shot": "title"
+  },
+  {
+   "text": "Dans cette ville, le jour de tes douze ans, tu peux échanger un souvenir contre un vœu.",
+   "shot": "rule"
+  },
+  {
+   "text": "Un seul. Et tu ne peux jamais le récupérer.",
+   "shot": "jars"
+  },
+  {
+   "text": "La maman d'Ilyes était très malade.",
+   "shot": "mom_sick"
+  },
+  {
+   "text": "Les médecins ne lui donnaient plus que quelques jours.",
+   "shot": "doctor"
+  },
+  {
+   "text": "Le jour de ses douze ans, Ilyes est allé voir le Marchand de Vœux.",
+   "shot": "shop"
+  },
+  {
+   "text": "« Je veux que ma maman guérisse. »",
+   "shot": "ask"
+  },
+  {
+   "text": "Le vieil homme a souri tristement :",
+   "shot": "merchant"
+  },
+  {
+   "text": "« Alors il me faut ton plus beau souvenir. »",
+   "shot": "merchant_close"
+  },
+  {
+   "text": "Ilyes n'a pas hésité.",
+   "shot": "take"
+  },
+  {
+   "text": "Le lendemain matin, sa maman s'est levée. Guérie.",
+   "shot": "mom_up"
+  },
+  {
+   "text": "Elle a couru dans sa chambre, en pleurant de joie.",
+   "shot": "mom_run"
+  },
+  {
+   "text": "Ilyes la regardait, poliment.",
+   "shot": "look"
+  },
+  {
+   "text": "Et il a demandé : « Bonjour, madame. Vous êtes qui ? »",
+   "shot": "who"
+  },
+  {
+   "text": "Son plus beau souvenir… c'était elle.",
+   "shot": "jar_mom"
+  },
+  {
+   "text": "Toute sa vie, il n'a jamais su qui elle était.",
+   "shot": "years"
+  },
+  {
+   "text": "Mais chaque soir, une dame qu'il ne connaissait pas venait lui lire une histoire.",
+   "shot": "read"
+  },
+  {
+   "text": "Et il ne savait pas pourquoi, mais avec elle… il se sentait chez lui.",
+   "shot": "final"
+  }
+ ]
+}

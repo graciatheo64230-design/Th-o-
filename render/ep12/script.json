@@ -1,0 +1,73 @@
+{
+ "title": "Le prix des mots",
+ "segments": [
+  {
+   "text": "Le prix des mots.",
+   "shot": "title"
+  },
+  {
+   "text": "Dans cette ville, chaque mot prononcé coûte un euro.",
+   "shot": "rule"
+  },
+  {
+   "text": "Les riches parlent toute la journée.",
+   "shot": "rich"
+  },
+  {
+   "text": "Les pauvres, eux, se taisent.",
+   "shot": "poor"
+  },
+  {
+   "text": "Sami, huit ans, n'avait jamais dit un seul mot.",
+   "shot": "sami"
+  },
+  {
+   "text": "Tout le monde le croyait muet.",
+   "shot": "whisper"
+  },
+  {
+   "text": "Mais chaque soir, Sami glissait une pièce dans une boîte en fer, cachée sous son lit.",
+   "shot": "coin_box"
+  },
+  {
+   "text": "Il voulait dire trois mots. Juste trois. À sa maman.",
+   "shot": "sami_mom"
+  },
+  {
+   "text": "Pendant six ans, il a ramassé des bouteilles, porté des courses, lavé des voitures.",
+   "shot": "work"
+  },
+  {
+   "text": "Le jour de ses quatorze ans, la boîte était pleine.",
+   "shot": "box_full"
+  },
+  {
+   "text": "Il a couru jusqu'à la cuisine, il a pris la main de sa mère",
+   "shot": "run"
+  },
+  {
+   "text": "et il a dit : « Je t'aime, maman. »",
+   "shot": "say"
+  },
+  {
+   "text": "Elle l'a regardé. Elle n'a pas répondu.",
+   "shot": "mom_look"
+  },
+  {
+   "text": "Parce que sa maman était sourde depuis sa naissance.",
+   "shot": "deaf"
+  },
+  {
+   "text": "Elle n'avait jamais entendu un seul mot de sa vie.",
+   "shot": "mom_close"
+  },
+  {
+   "text": "Alors elle a levé les mains, et elle a signé, lentement :",
+   "shot": "sign"
+  },
+  {
+   "text": "« Je sais. Je l'ai lu dans tes yeux, chaque jour, depuis six ans. »",
+   "shot": "final"
+  }
+ ]
+}

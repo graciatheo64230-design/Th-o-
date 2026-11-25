@@ -1,0 +1,77 @@
+{
+ "title": "Ceux qu'on oublie",
+ "segments": [
+  {
+   "text": "Ceux qu'on oublie.",
+   "shot": "title"
+  },
+  {
+   "text": "Dans cette ville, quand plus personne ne se souvient de toi, tu disparais.",
+   "shot": "rule"
+  },
+  {
+   "text": "Nils, dix ans, allait voir son grand-père tous les jours.",
+   "shot": "nils_walk"
+  },
+  {
+   "text": "Papy perdait la mémoire. Un peu plus chaque semaine.",
+   "shot": "papy"
+  },
+  {
+   "text": "Le lundi, il l'appelait « mon grand ».",
+   "shot": "monday"
+  },
+  {
+   "text": "Le mercredi, il l'appelait « petit ».",
+   "shot": "wednesday"
+  },
+  {
+   "text": "Le vendredi, il lui demandait : « Tu es qui, toi ? »",
+   "shot": "friday"
+  },
+  {
+   "text": "Et chaque fois que Papy l'oubliait un peu, Nils devenait un peu plus transparent.",
+   "shot": "fading"
+  },
+  {
+   "text": "Ses parents étaient partis depuis longtemps.",
+   "shot": "parents"
+  },
+  {
+   "text": "Ses copains l'avaient oublié depuis le déménagement.",
+   "shot": "friends"
+  },
+  {
+   "text": "Papy était le dernier à se souvenir de lui.",
+   "shot": "last"
+  },
+  {
+   "text": "Un dimanche, Nils lui a apporté une photo : eux deux, à la pêche.",
+   "shot": "photo"
+  },
+  {
+   "text": "Papy l'a regardée longtemps. Puis il a dit : « C'est qui, ce garçon ? »",
+   "shot": "who"
+  },
+  {
+   "text": "Nils a baissé les yeux. Ses mains devenaient invisibles.",
+   "shot": "hands"
+  },
+  {
+   "text": "Il a juste eu le temps de murmurer : « C'est moi, Papy. »",
+   "shot": "whisper"
+  },
+  {
+   "text": "Le lendemain, l'infirmière a trouvé Papy en train de pleurer devant la photo.",
+   "shot": "nurse"
+  },
+  {
+   "text": "Il répétait : « Il manque quelqu'un. Je sais qu'il manque quelqu'un. »",
+   "shot": "papy_cry"
+  },
+  {
+   "text": "Sur la photo, à côté de lui, il n'y avait plus personne.",
+   "shot": "final"
+  }
+ ]
+}

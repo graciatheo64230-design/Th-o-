@@ -1,0 +1,77 @@
+{
+ "title": "La lettre du futur",
+ "segments": [
+  {
+   "text": "La lettre du futur.",
+   "shot": "title"
+  },
+  {
+   "text": "Dans cette ville, le jour de tes dix ans, tu reçois une lettre écrite par toi-même… dans le futur.",
+   "shot": "rule"
+  },
+  {
+   "text": "Elle te donne un seul conseil. Le plus important de ta vie.",
+   "shot": "glow"
+  },
+  {
+   "text": "Les autres enfants recevaient des conseils comme : « Travaille bien à l'école. »",
+   "shot": "kids"
+  },
+  {
+   "text": "La lettre d'Ethan disait : « Pardonne à papa. »",
+   "shot": "letter"
+  },
+  {
+   "text": "Son père était parti quand il avait cinq ans. Sans un mot.",
+   "shot": "leave"
+  },
+  {
+   "text": "Ethan a déchiré la lettre. Il ne lui pardonnerait jamais.",
+   "shot": "tear"
+  },
+  {
+   "text": "Les années ont passé. Ethan a grandi avec sa colère.",
+   "shot": "grow"
+  },
+  {
+   "text": "Le jour de ses trente ans, un notaire l'a appelé.",
+   "shot": "phone"
+  },
+  {
+   "text": "Son père venait de mourir. Il lui laissait une boîte.",
+   "shot": "box"
+  },
+  {
+   "text": "Dedans, il y avait des dizaines de lettres. Une pour chaque anniversaire.",
+   "shot": "letters"
+  },
+  {
+   "text": "Jamais envoyées.",
+   "shot": "unsent"
+  },
+  {
+   "text": "La première disait : « Pardon d'être parti. Je ne voulais pas que tu me voies malade. »",
+   "shot": "first"
+  },
+  {
+   "text": "Et tout au fond de la boîte, il y avait un brouillon.",
+   "shot": "draft"
+  },
+  {
+   "text": "Le brouillon d'une lettre qu'Ethan connaissait par cœur.",
+   "shot": "draft_close"
+  },
+  {
+   "text": "« Pardonne à papa. »",
+   "shot": "pardon"
+  },
+  {
+   "text": "Ce n'était pas l'écriture d'Ethan.",
+   "shot": "shock"
+  },
+  {
+   "text": "C'était celle de son père.",
+   "shot": "final"
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "title": "Les cheveux blancs",
+ "segments": [
+  {
+   "text": "Dans cette ville, chaque mensonge fait pousser un cheveu blanc.",
+   "shot": "rule"
+  },
+  {
+   "text": "Ici, les enfants ont tous les cheveux noirs.",
+   "shot": "kids"
+  },
+  {
+   "text": "Sauf Noah.",
+   "shot": "noah_reveal"
+  },
+  {
+   "text": "À neuf ans, Noah avait la tête toute blanche.",
+   "shot": "noah_walk"
+  },
+  {
+   "text": "À l'école, on l'appelait « le menteur ».",
+   "shot": "kids_mock"
+  },
+  {
+   "text": "Personne ne voulait s'asseoir à côté de lui.",
+   "shot": "noah_alone"
+  },
+  {
+   "text": "Personne ne savait que sa maman était malade.",
+   "shot": "mom_bed"
+  },
+  {
+   "text": "Et que chaque soir, à son chevet, Noah lui disait :",
+   "shot": "bedside"
+  },
+  {
+   "text": "« Aujourd'hui, j'ai joué avec plein de copains. »",
+   "shot": "noah_lie"
+  },
+  {
+   "text": "Elle souriait.",
+   "shot": "mom_smile"
+  },
+  {
+   "text": "Et le lendemain, il avait un cheveu blanc de plus.",
+   "shot": "mirror"
+  },
+  {
+   "text": "Pendant deux ans, il a menti tous les soirs.",
+   "shot": "nights"
+  },
+  {
+   "text": "Puis un matin d'hiver, sa maman est partie.",
+   "shot": "empty_bed"
+  },
+  {
+   "text": "Le jour de l'enterrement, Noah a voulu lui coiffer les cheveux une dernière fois.",
+   "shot": "last_time"
+  },
+  {
+   "text": "Ils lui sont restés dans les mains.",
+   "shot": "wig_hands"
+  },
+  {
+   "text": "C'était une perruque.",
+   "shot": "wig_close"
+  },
+  {
+   "text": "En dessous, ses cheveux étaient complètement blancs.",
+   "shot": "mom_white"
+  },
+  {
+   "text": "Parce que chaque soir, elle aussi, elle lui répondait :",
+   "shot": "memory"
+  },
+  {
+   "text": "« Ne t'inquiète pas, mon chéri. Je vais guérir. »",
+   "shot": "final"
+  }
+ ]
+}

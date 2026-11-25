@@ -1,0 +1,77 @@
+{
+ "title": "Le chien de la case vide",
+ "segments": [
+  {
+   "text": "Épisode 3 : le chien de la case vide.",
+   "shot": "title"
+  },
+  {
+   "text": "Dans le refuge, la case numéro neuf avait toujours un panneau : « Réservé ».",
+   "shot": "kennel_sign"
+  },
+  {
+   "text": "Dedans, il y avait un vieux chien, Biscuit,",
+   "shot": "dog_intro"
+  },
+  {
+   "text": "qui ne quittait jamais la porte des yeux.",
+   "shot": "dog_watch"
+  },
+  {
+   "text": "Les familles demandaient : « Et lui ? »",
+   "shot": "families"
+  },
+  {
+   "text": "Le gardien répondait : « Lui, il attend quelqu'un. »",
+   "shot": "keeper"
+  },
+  {
+   "text": "Trois ans plus tôt, un petit garçon l'avait déposé en pleurant.",
+   "shot": "flashback"
+  },
+  {
+   "text": "« Gardez-le pour moi. Je reviendrai quand j'aurai une maison. »",
+   "shot": "boy_promise"
+  },
+  {
+   "text": "Personne n'y croyait.",
+   "shot": "nobody"
+  },
+  {
+   "text": "Les saisons ont passé. Biscuit a vieilli. Ses pattes tremblaient.",
+   "shot": "dog_old"
+  },
+  {
+   "text": "Un soir de pluie, le gardien voulut enlever le panneau.",
+   "shot": "rain_sign"
+  },
+  {
+   "text": "Biscuit aboya. Pour la première fois.",
+   "shot": "dog_bark"
+  },
+  {
+   "text": "Le lendemain matin, une voiture s'arrêta devant le refuge.",
+   "shot": "car_arrive"
+  },
+  {
+   "text": "Un jeune homme en descendit, des clés à la main.",
+   "shot": "young_man"
+  },
+  {
+   "text": "« J'ai une maison, maintenant. »",
+   "shot": "man_says"
+  },
+  {
+   "text": "Biscuit n'a pas couru. Il n'en avait plus la force.",
+   "shot": "dog_slow"
+  },
+  {
+   "text": "Il a juste posé sa tête contre lui.",
+   "shot": "dog_head"
+  },
+  {
+   "text": "Et sa queue n'a plus jamais arrêté de bouger.",
+   "shot": "tail_wag"
+  }
+ ]
+}

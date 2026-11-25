@@ -1,0 +1,69 @@
+{
+ "title": "L'étoile de Théo",
+ "segments": [
+  {
+   "text": "Épisode 4 : l'étoile de Théo.",
+   "shot": "title"
+  },
+  {
+   "text": "Chaque semaine, Madame Lune rendait les contrôles.",
+   "shot": "teacher_hand"
+  },
+  {
+   "text": "Tout le monde avait une note. Sauf Théo.",
+   "shot": "grades"
+  },
+  {
+   "text": "Sur sa copie, il y avait juste un petit dessin : une étoile.",
+   "shot": "star_copy"
+  },
+  {
+   "text": "Les autres riaient : « Même la maîtresse sait que t'es nul. »",
+   "shot": "kids_laugh"
+  },
+  {
+   "text": "Théo rentrait chez lui en cachant ses feuilles.",
+   "shot": "theo_home"
+  },
+  {
+   "text": "À la fin de l'année, Madame Lune quitta l'école.",
+   "shot": "teacher_leaves"
+  },
+  {
+   "text": "Elle laissa une boîte, avec écrit dessus : « Pour Théo ».",
+   "shot": "box_label"
+  },
+  {
+   "text": "Dedans, il y avait toutes ses copies, corrigées en secret.",
+   "shot": "copies"
+  },
+  {
+   "text": "Dix-sept. Dix-huit. Dix-neuf.",
+   "shot": "grades_reveal"
+  },
+  {
+   "text": "Et un mot : « Tu étais le meilleur.",
+   "shot": "note"
+  },
+  {
+   "text": "Mais si les autres l'avaient su, ils t'auraient fait encore plus de mal.",
+   "shot": "theo_read"
+  },
+  {
+   "text": "L'étoile, ça voulait dire : je te vois. »",
+   "shot": "star_meaning"
+  },
+  {
+   "text": "Aujourd'hui, Théo est professeur.",
+   "shot": "adult_theo"
+  },
+  {
+   "text": "Et parfois, sur la copie d'un enfant trop seul,",
+   "shot": "child_alone"
+  },
+  {
+   "text": "il dessine une étoile.",
+   "shot": "draws_star"
+  }
+ ]
+}

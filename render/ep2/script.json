@@ -1,0 +1,85 @@
+{
+ "title": "Le réveil de 6 h 12",
+ "segments": [
+  {
+   "text": "Épisode 2 : le réveil de 6 h 12.",
+   "shot": "title"
+  },
+  {
+   "text": "Tous les matins, le réveil de Papy Jean sonnait à six heures douze.",
+   "shot": "alarm_ring"
+  },
+  {
+   "text": "Pas six heures. Six heures douze.",
+   "shot": "alarm_zoom"
+  },
+  {
+   "text": "Sa petite-fille Lina trouvait ça ridicule.",
+   "shot": "kitchen"
+  },
+  {
+   "text": "« Papy, personne ne se lève à six heures douze ! »",
+   "shot": "lina_talk"
+  },
+  {
+   "text": "Il riait, enfilait son vieux manteau,",
+   "shot": "jean_coat"
+  },
+  {
+   "text": "et partait marcher jusqu'au pont.",
+   "shot": "jean_walk"
+  },
+  {
+   "text": "Seul. Par tous les temps.",
+   "shot": "jean_alone"
+  },
+  {
+   "text": "Un matin d'hiver, Papy Jean ne s'est pas réveillé.",
+   "shot": "bed_still"
+  },
+  {
+   "text": "Le lendemain, à six heures douze, le réveil a sonné dans la maison vide.",
+   "shot": "alarm_empty"
+  },
+  {
+   "text": "Lina n'a pas eu le courage de l'éteindre.",
+   "shot": "lina_cry"
+  },
+  {
+   "text": "Alors elle a pris le manteau trop grand,",
+   "shot": "lina_coat"
+  },
+  {
+   "text": "et elle a marché jusqu'au pont.",
+   "shot": "lina_walk"
+  },
+  {
+   "text": "Là-bas, gravés dans la pierre, il y avait deux prénoms : « Jean et Marie ».",
+   "shot": "stone_names"
+  },
+  {
+   "text": "Et une date. Le jour de leur rencontre. À six heures douze.",
+   "shot": "stone_date"
+  },
+  {
+   "text": "Sa grand-mère était morte avant sa naissance.",
+   "shot": "photo"
+  },
+  {
+   "text": "Mais pendant quarante ans, chaque matin, Papy était venu lui dire bonjour.",
+   "shot": "jean_bridge"
+  },
+  {
+   "text": "Aujourd'hui, Lina a vingt ans.",
+   "shot": "lina_adult"
+  },
+  {
+   "text": "Son réveil sonne à six heures douze.",
+   "shot": "alarm_adult"
+  },
+  {
+   "text": "Et sur le pont, il y a maintenant trois prénoms.",
+   "shot": "stone_three"
+  }
+ ]
+}

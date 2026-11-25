@@ -86,7 +86,7 @@ def align(ep, words_file, audio, start, end):
     v = v[:int((end - off + .3) * SR)]
     fo = int(.25 * SR); v[-fo:] *= np.linspace(1, 0, fo)
     m = music(SR, dur)
-    out = np.zeros(int(dur * SR)); out[:len(v)] += v; out += m[:len(out)] * float(os.environ.get("MUSIC", ".16"))
+    out = np.zeros(int(dur * SR)); out[:len(v)] += v; out += m[:len(out)] * float(os.environ.get("MUSIC", "0"))
     out /= max(1e-6, np.abs(out).max()) / .92
     with wave.open(os.path.join(D, "mix.wav"), "w") as f:
         f.setnchannels(1); f.setsampwidth(2); f.setframerate(SR); f.writeframes((np.clip(out, -1, 1) * 32767).astype(np.int16).tobytes())

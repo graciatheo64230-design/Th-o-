@@ -1,0 +1,57 @@
+{
+ "title": "Le dessin sur le frigo",
+ "segments": [
+  {
+   "text": "Chaque soir, Léa dessinait la même chose pour son papa.",
+   "shot": "lea_draw"
+  },
+  {
+   "text": "Une maison, un soleil, et trois personnes.",
+   "shot": "drawing3"
+  },
+  {
+   "text": "Son papa le collait sur le frigo, en disant : « Le plus beau de tous. »",
+   "shot": "fridge_stick"
+  },
+  {
+   "text": "Mais depuis que maman était partie, le dessin n'avait plus que deux personnes.",
+   "shot": "drawing2"
+  },
+  {
+   "text": "Un soir, papa trouva Léa en train de pleurer devant sa feuille.",
+   "shot": "lea_cry"
+  },
+  {
+   "text": "« Je ne sais plus comment dessiner la maison sans maman. »",
+   "shot": "lea_says"
+  },
+  {
+   "text": "Papa s'assit par terre. Il prit un crayon.",
+   "shot": "dad_sit"
+  },
+  {
+   "text": "Et pour la première fois, c'est lui qui dessina.",
+   "shot": "dad_draw"
+  },
+  {
+   "text": "Une maison, un soleil, deux personnes.",
+   "shot": "drawing_dad"
+  },
+  {
+   "text": "Et dans le ciel, une étoile énorme, qui brillait sur eux.",
+   "shot": "star_draw"
+  },
+  {
+   "text": "« Maman, elle est là. Elle nous regarde. »",
+   "shot": "dad_hug"
+  },
+  {
+   "text": "Ce dessin-là, il n'est jamais parti du frigo.",
+   "shot": "fridge_final"
+  },
+  {
+   "text": "Même vingt ans plus tard, quand Léa a eu sa propre maison, elle l'a emporté avec elle.",
+   "shot": "adult_lea"
+  }
+ ]
+}

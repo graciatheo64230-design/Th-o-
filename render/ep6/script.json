@@ -1,0 +1,73 @@
+{
+ "title": "La boîte aux lettres du ciel",
+ "segments": [
+  {
+   "text": "Dans cette ville.",
+   "shot": "title"
+  },
+  {
+   "text": "Au bout de la rue, il y avait une vieille boîte aux lettres que plus personne n'utilisait.",
+   "shot": "mailbox"
+  },
+  {
+   "text": "Sauf Nathan, huit ans.",
+   "shot": "nathan_intro"
+  },
+  {
+   "text": "Chaque dimanche, il y glissait une lettre.",
+   "shot": "slide_letter"
+  },
+  {
+   "text": "Adresse : « Maman, au ciel ».",
+   "shot": "envelope_close"
+  },
+  {
+   "text": "Il racontait tout : l'école, ses dessins, son père qui ne souriait plus.",
+   "shot": "writing"
+  },
+  {
+   "text": "Un dimanche, en ouvrant la boîte, il trouva une réponse.",
+   "shot": "open_box"
+  },
+  {
+   "text": "« Je suis fière de toi, mon grand. Prends soin de papa. »",
+   "shot": "reply_card"
+  },
+  {
+   "text": "Les lettres continuèrent, pendant des années.",
+   "shot": "letters_pile"
+  },
+  {
+   "text": "Le jour de ses dix-huit ans, Nathan attendit devant la boîte.",
+   "shot": "teen_wait"
+  },
+  {
+   "text": "Et il vit arriver le facteur.",
+   "shot": "postman_arrive"
+  },
+  {
+   "text": "Le vieux Marcel. Une lettre à la main.",
+   "shot": "marcel_close"
+  },
+  {
+   "text": "Marcel baissa les yeux : « Moi aussi, j'ai perdu quelqu'un.",
+   "shot": "marcel_sad"
+  },
+  {
+   "text": "Écrire tes réponses, ça m'a aidé à tenir. »",
+   "shot": "marcel_cry"
+  },
+  {
+   "text": "Nathan ne dit rien. Il le serra dans ses bras.",
+   "shot": "hug"
+  },
+  {
+   "text": "Aujourd'hui, Nathan est facteur.",
+   "shot": "nathan_postman"
+  },
+  {
+   "text": "Et il n'a jamais enlevé la vieille boîte aux lettres.",
+   "shot": "final_mailbox"
+  }
+ ]
+}

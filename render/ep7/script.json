@@ -1,0 +1,65 @@
+{
+ "title": "Le banc numéro quatre",
+ "segments": [
+  {
+   "text": "Épisode 7 : le banc numéro quatre.",
+   "shot": "title"
+  },
+  {
+   "text": "Tous les jours à midi, Madame Odette s'asseyait sur le banc numéro quatre du parc.",
+   "shot": "odette_bench"
+  },
+  {
+   "text": "Toujours à gauche. Jamais au milieu.",
+   "shot": "left_side"
+  },
+  {
+   "text": "Un jour, un ado pressé s'assit à côté d'elle.",
+   "shot": "teen_sits"
+  },
+  {
+   "text": "« Pardon, cette place est prise », dit-elle doucement.",
+   "shot": "odette_says"
+  },
+  {
+   "text": "Il regarda autour de lui. Il n'y avait personne.",
+   "shot": "teen_looks"
+  },
+  {
+   "text": "« Prise par qui ? »",
+   "shot": "teen_asks"
+  },
+  {
+   "text": "« Par mon mari. On s'est rencontrés ici, il y a soixante ans.",
+   "shot": "memory"
+  },
+  {
+   "text": "Il est parti l'an dernier. »",
+   "shot": "odette_sad"
+  },
+  {
+   "text": "L'ado resta là, sans savoir quoi dire.",
+   "shot": "teen_silent"
+  },
+  {
+   "text": "Le lendemain, il revint. Il s'assit par terre, à côté du banc.",
+   "shot": "teen_ground"
+  },
+  {
+   "text": "Et il revint tous les jours, pour lui tenir compagnie.",
+   "shot": "together"
+  },
+  {
+   "text": "Au printemps, une plaque apparut sur le banc numéro quatre.",
+   "shot": "plaque_wide"
+  },
+  {
+   "text": "« Ici, on s'aimait. Odette et Henri. »",
+   "shot": "plaque_close"
+  },
+  {
+   "text": "Et en dessous, plus petit : « Et Malik, qui m'a tenu la main quand j'étais seule. »",
+   "shot": "plaque_malik"
+  }
+ ]
+}

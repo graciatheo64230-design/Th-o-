@@ -66,6 +66,9 @@ export function createWorld(renderer) {
       const d = world.sunDir || [-10, 16, 14];
       sun.target.position.copy(tgt); sun.position.set(tgt.x + d[0], tgt.y + d[1], tgt.z + d[2]);
     },
+    // caméra autour d'une cible : yaw 0 = caméra côté +z regardant vers -z ; un perso tourné de ry se filme de face avec yaw = ry
+    shoot(tgt, dist, yaw, pitch = .1) { world.look(new THREE.Vector3(tgt.x + Math.sin(yaw) * Math.cos(pitch) * dist, tgt.y + Math.sin(pitch) * dist, tgt.z + Math.cos(yaw) * Math.cos(pitch) * dist), tgt); },
+    head(c, dy = 0) { const s = c.g.scale.y; return new THREE.Vector3(c.g.position.x, c.g.position.y + (2.45 + dy) * s, c.g.position.z); },
     add(c) { world.chars.push(c); scene.add(c.g); return c; },
     place(c, x, z, ry = 0, y = 0) { c.g.visible = true; c.g.position.set(x, y, z); c.g.rotation.y = ry; },
     resetChars() { world.chars.forEach(c => { c.reset(); c.g.visible = false; }); },

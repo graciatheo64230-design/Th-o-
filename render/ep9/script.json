@@ -1,0 +1,69 @@
+{
+ "title": "Le chat du cinquième étage",
+ "segments": [
+  {
+   "text": "Chaque matin, un chat roux apparaissait à la fenêtre du cinquième étage.",
+   "shot": "building_cat"
+  },
+  {
+   "text": "Et chaque matin, en bas, un vieux monsieur lui faisait coucou.",
+   "shot": "oldman_wave"
+  },
+  {
+   "text": "Les voisins trouvaient ça bizarre. Un vieux qui parle à un chat.",
+   "shot": "neighbors"
+  },
+  {
+   "text": "Un jour, le chat n'était pas là.",
+   "shot": "empty_window"
+  },
+  {
+   "text": "Le vieux monsieur attendit. Une heure. Deux heures.",
+   "shot": "wait"
+  },
+  {
+   "text": "Puis il monta les cinq étages, marche après marche.",
+   "shot": "stairs"
+  },
+  {
+   "text": "Il frappa. Personne. Il insista.",
+   "shot": "knock"
+  },
+  {
+   "text": "Derrière la porte, une vieille dame était tombée.",
+   "shot": "lady_fallen"
+  },
+  {
+   "text": "Elle ne pouvait plus se relever.",
+   "shot": "lady_close"
+  },
+  {
+   "text": "Le chat miaulait à côté d'elle, sans s'arrêter.",
+   "shot": "cat_meow"
+  },
+  {
+   "text": "Les pompiers sont arrivés à temps.",
+   "shot": "firefighters"
+  },
+  {
+   "text": "À l'hôpital, elle a demandé : « Comment vous saviez ? »",
+   "shot": "hospital"
+  },
+  {
+   "text": "Il a souri : « Votre chat, c'est mon réveil.",
+   "shot": "oldman_smile"
+  },
+  {
+   "text": "Quand il n'est pas là, c'est que quelque chose ne va pas. »",
+   "shot": "cat_memory"
+  },
+  {
+   "text": "Aujourd'hui, ils prennent le café ensemble, tous les matins.",
+   "shot": "coffee"
+  },
+  {
+   "text": "Et le chat, lui, a deux fenêtres.",
+   "shot": "two_windows"
+  }
+ ]
+}

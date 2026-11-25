@@ -1,0 +1,69 @@
+{
+ "title": "Le parapluie jaune",
+ "segments": [
+  {
+   "text": "Dans cette ville.",
+   "shot": "title"
+  },
+  {
+   "text": "Chaque fois qu'il pleuvait, un parapluie jaune apparaissait à l'arrêt de bus.",
+   "shot": "umbrella_stop"
+  },
+  {
+   "text": "Avec une étiquette : « Prends-le. Rends-le quand tu peux. »",
+   "shot": "tag_close"
+  },
+  {
+   "text": "Personne ne savait qui le mettait là.",
+   "shot": "people_wait"
+  },
+  {
+   "text": "Pendant dix ans, le parapluie jaune a fait le tour de la ville.",
+   "shot": "umbrella_travel"
+  },
+  {
+   "text": "Puis un hiver, il a disparu.",
+   "shot": "stop_empty"
+  },
+  {
+   "text": "Une petite fille, Maya, a mené l'enquête.",
+   "shot": "maya_intro"
+  },
+  {
+   "text": "Elle a suivi les rues, interrogé les voisins, jusqu'au bout de la ligne de bus.",
+   "shot": "maya_search"
+  },
+  {
+   "text": "Là, dans une petite maison, vivait un vieil homme.",
+   "shot": "small_house"
+  },
+  {
+   "text": "Seul. Malade.",
+   "shot": "paul_bed"
+  },
+  {
+   "text": "Le parapluie jaune était posé près de son lit.",
+   "shot": "umbrella_bed"
+  },
+  {
+   "text": "« Je n'arrive plus à marcher jusqu'à l'arrêt », dit-il.",
+   "shot": "paul_talk"
+  },
+  {
+   "text": "Le lendemain, il pleuvait.",
+   "shot": "rain_next"
+  },
+  {
+   "text": "Et à l'arrêt de bus, il n'y avait pas un parapluie jaune.",
+   "shot": "stop_reveal"
+  },
+  {
+   "text": "Il y en avait cinquante.",
+   "shot": "fifty"
+  },
+  {
+   "text": "Avec une étiquette : « Pour Monsieur Paul. À notre tour. »",
+   "shot": "final_tag"
+  }
+ ]
+}

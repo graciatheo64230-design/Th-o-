@@ -5,3 +5,4 @@ render/out/list.txt
 render/ep*/voice.wav
 render/ep*/music.wav
 render/out/*.log
+render/out/q*.txt

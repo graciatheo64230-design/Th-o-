@@ -1,0 +1,27 @@
+{
+  "title": "Le dernier croissant",
+  "segments": [
+    {"text": "Chaque soir, à dix-neuf heures, Madame Rose fermait sa boulangerie.", "shot": "street_wide"},
+    {"text": "Mais elle gardait toujours un croissant.", "shot": "rose_place"},
+    {"text": "Le dernier.", "shot": "croissant_dome", "pause": 0.8},
+    {"text": "Personne ne savait pour qui.", "shot": "interior_wide"},
+    {"text": "Les clients se moquaient : « Rose, tu vas le manger toute seule ? »", "shot": "clients_laugh"},
+    {"text": "Elle souriait, sans répondre.", "shot": "rose_smile", "pause": 0.8},
+    {"text": "Un soir de décembre, un petit garçon s'arrêta devant la vitrine.", "shot": "boy_street"},
+    {"text": "Il n'avait pas de manteau.", "shot": "boy_shiver"},
+    {"text": "Il regardait le croissant comme on regarde un trésor.", "shot": "boy_window", "pause": 0.7},
+    {"text": "Rose ouvrit la porte, et lui tendit le croissant.", "shot": "door_give"},
+    {"text": "« Il t'attendait. »", "shot": "rose_warm", "pause": 0.9},
+    {"text": "Le garçon revint le lendemain. Et le jour d'après.", "shot": "calendar"},
+    {"text": "Tous les soirs, pendant tout l'hiver.", "shot": "both_eating", "pause": 1.0},
+    {"text": "Puis un matin, la boulangerie resta fermée.", "shot": "closed_morning"},
+    {"text": "Rose était partie, doucement, dans son sommeil.", "shot": "empty_counter", "pause": 1.0},
+    {"text": "Sur la porte, il y avait une lettre : « Pour le garçon du soir. »", "shot": "letter_door"},
+    {"text": "À l'intérieur, une clé. Et quelques mots.", "shot": "key_closeup"},
+    {"text": "« Il y a cinquante ans, quelqu'un a gardé un croissant pour moi.", "shot": "letter_text"},
+    {"text": "Maintenant, c'est ton tour. »", "shot": "boy_cry", "pause": 1.1},
+    {"text": "Vingt ans plus tard, chaque soir à dix-neuf heures, un boulanger ferme sa boutique.", "shot": "adult_close"},
+    {"text": "Et il garde toujours un croissant.", "shot": "adult_dome"},
+    {"text": "Le dernier.", "shot": "final_window", "pause": 2.5}
+  ]
+}

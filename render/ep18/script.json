@@ -1,0 +1,87 @@
+{
+ "title": "Le coffre (v2, ville moderne)",
+ "captions": "groups",
+ "segments": [
+  {
+   "text": "Tout ce qu'il mettait dans ce coffre… doublait pendant la nuit.",
+   "shot": "hook"
+  },
+  {
+   "text": "Kenzo l'avait trouvé dans la cave, sous sa maison.",
+   "shot": "cave"
+  },
+  {
+   "text": "Un lingot de fer le soir.",
+   "shot": "one_ingot"
+  },
+  {
+   "text": "Deux le matin.",
+   "shot": "two_ingots"
+  },
+  {
+   "text": "Alors il a tout mis dedans.",
+   "shot": "put_all"
+  },
+  {
+   "text": "Fer. Or. Émeraudes.",
+   "shot": "items"
+  },
+  {
+   "text": "En un mois, il était devenu le plus riche du village.",
+   "shot": "rich"
+  },
+  {
+   "text": "Mais sa mère, elle, avait l'air de plus en plus fatiguée.",
+   "shot": "mom_tired"
+  },
+  {
+   "text": "Elle travaillait plus.",
+   "shot": "mom_work"
+  },
+  {
+   "text": "Elle mangeait moins.",
+   "shot": "mom_eat"
+  },
+  {
+   "text": "Kenzo ne posait pas de questions.",
+   "shot": "look_away"
+  },
+  {
+   "text": "Un soir, il a mis son tout premier diamant.",
+   "shot": "diamond_in"
+  },
+  {
+   "text": "Au matin : deux diamants.",
+   "shot": "two_diamonds"
+  },
+  {
+   "text": "Et dans la chambre d'à côté… sa mère pleurait.",
+   "shot": "freeze"
+  },
+  {
+   "text": "Elle venait d'ouvrir son coffre.",
+   "shot": "mom_chest"
+  },
+  {
+   "text": "Sa bague de mariage… n'avait plus de diamant.",
+   "shot": "ring"
+  },
+  {
+   "text": "Le coffre ne doublait rien.",
+   "shot": "chest_red"
+  },
+  {
+   "text": "Il prenait dans le coffre le plus proche.",
+   "shot": "beam"
+  },
+  {
+   "text": "Celui de sa mère.",
+   "shot": "mom_empty"
+  },
+  {
+   "text": "Depuis un mois, elle savait. Et elle n'avait jamais rien dit.",
+   "shot": "final"
+  }
+ ],
+ "fadeIn": false
+}

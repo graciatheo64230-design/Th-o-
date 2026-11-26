@@ -38,7 +38,8 @@ function buildGroups() {
     s.words.forEach((w, i) => {
       cur.push(w);
       const len = cur.map(x => x.w).join(' ').length;
-      if (/[.,!?…:;»]$/.test(w.w) || cur.length >= 4 || len > 16) flush();
+      const weak = /^(le|la|les|l'.*|de|du|des|d'.*|un|une|dans|à|au|aux|sa|son|ses|sur|et|qui|que|qu'.*|ce|il|elle|ne|n'.*|plus|en|par|pour|avec|mon|ma|mes|tout)$/i.test(w.w);
+      if (/[.,!?…:;»]$/.test(w.w) || ((cur.length >= 3 || len > 15) && !weak) || cur.length >= 5) flush();
     });
     flush();
   }
@@ -128,7 +129,7 @@ window.frame = (t, quality = .9) => {
   if (timeline.captions === 'groups') groupCaption(t);
   else { const w = wordAt(t); if (w) caption(w.w, w.age); }
   // fondus début / fin
-  const fade = Math.max(clamp(1 - t / .6), clamp((t - (timeline.duration - 1.6)) / 1.4));
+  const fade = Math.max(timeline.fadeIn === false ? 0 : clamp(1 - t / .6), clamp((t - (timeline.duration - 1.6)) / 1.4));
   if (fade > 0) { ctx.fillStyle = `rgba(0,0,0,${fade})`; ctx.fillRect(0, 0, W, H); }
   return out.toDataURL('image/jpeg', quality);
 };

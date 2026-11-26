@@ -42,7 +42,7 @@ export function createWorld(renderer) {
     onMood(fn) { moodHooks.push(fn); },
     mood(name) {
       const m = MOODS[name]; world.current = name;
-      scene.background = m.tex; scene.fog = new THREE.Fog(m.fog, 30, 110);
+      scene.background = m.tex; scene.fog = new THREE.Fog(m.fog, world.fogNear ?? 30, world.fogFar ?? 110);
       hemi.color.set(m.hemi[0]); hemi.groundColor.set(m.hemi[1]); hemi.intensity = m.hemi[2];
       sun.color.set(m.sun[0]); sun.intensity = m.sun[1]; world.sunDir = m.sunDir;
       stars.visible = !!m.stars; moodHooks.forEach(f => f(name, m));
